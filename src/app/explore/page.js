@@ -1,5 +1,6 @@
 'use client';
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Explore() {
   const destinations = [
@@ -43,12 +44,13 @@ export default function Explore() {
           <p className={styles.subtitle}>
             Discover the latest travel trends and amazing places to visit!
           </p>
-          <div className={styles.ctaButton}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L12.09 8.26L20 9L12.09 9.74L10 16L7.91 9.74L0 9L7.91 8.26L10 2Z" fill="currentColor"/>
-            </svg>
-            Download on the App Store
-          </div>
+            <Image
+              src="/assets/images/app-store-image.svg"
+              alt="Download on the App Store"
+              width={152}
+              height={44}
+              priority
+            />
         </div>
 
         <div className={styles.destinations}>

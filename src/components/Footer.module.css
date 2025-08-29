@@ -78,20 +78,14 @@
 .appStoreButton {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-family: var(--font-geist-sans);
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.appStoreButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+.appStoreButton img {
+  width: 152px;
+  height: 44px;
+  object-fit: contain;
 }
 
 .footerRight {

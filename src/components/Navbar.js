@@ -46,10 +46,10 @@ export default function Navbar() {
         <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
           <div className={styles.logoWrapper}>
             <Image
-              src="/assets/images/booked_ai_logo.jpeg"
-              alt="Booked AI Logo"
-              width={32}
-              height={32}
+              src="/assets/images/logo-main.png"
+              alt="Booked AI Main Logo"
+              width={225}
+              height={58}
               className={styles.logoImage}
               priority
               onLoad={() => setLogoLoaded(true)}
@@ -58,9 +58,9 @@ export default function Navbar() {
                 setLogoLoaded(true);
               }}
             />
-            {logoLoaded && <div className={styles.betaTag}>BETA</div>}
+            {/* {logoLoaded && <div className={styles.betaTag}>BETA</div>} */}
           </div>
-          <span className={styles.logoText}>Booked AI</span>
+          {/* <span className={styles.logoText}>Booked AI</span> */}
         </Link>
 
         {/* Desktop Navigation */}

@@ -43,9 +43,9 @@ export default function Footer() {
           <div className={styles.appStoreButton}>
             <Image
               src="/assets/images/app-store-image.svg"
-              alt="App Store"
-              width={20}
-              height={20}
+              alt="Download on the App Store"
+              width={152}
+              height={44}
               priority
               onLoad={() => setAppStoreLoaded(true)}
               onError={(e) => {
@@ -53,7 +53,6 @@ export default function Footer() {
                 setAppStoreLoaded(true);
               }}
             />
-            Download on the App Store
           </div>
         </div>
         
