@@ -67,6 +67,35 @@
   margin: 0;
 }
 
+.ctaText {
+  font-family: var(--font-geist-sans);
+  font-size: 1.125rem;
+  color: #374151;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ctaButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-geist-sans);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  align-self: flex-start;
+}
+
+.ctaButton:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+}
+
 .phoneMockup {
   display: flex;
   justify-content: center;
@@ -322,49 +351,14 @@
   font-size: 1rem;
 }
 
-/* Beta Section - Disappears on scroll */
-.betaSection {
-  position: fixed;
-  bottom: 5rem;
-  right: 9rem;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.betaImage {
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  max-height: 150px;
-  object-fit: contain;
-}
-
-/* Mobile responsiveness for beta image */
-@media (max-width: 768px) {
-  .betaSection {
-    bottom: 8rem;
-    right: 2rem;
-  }
-  
-  .betaImage {
-    max-width: 120px;
-    max-height: 90px;
-  }
-}
-
-/* Deals Sections */
-.dealsSection {
+.infoSection {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
-}
-
-.dealsHeader {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.dealsTitle {
+.sectionTitle {
   font-family: var(--font-geist-sans);
   font-size: 2.5rem;
   font-weight: 700;
@@ -372,198 +366,75 @@
   margin: 0 0 1rem 0;
 }
 
-.highlight {
-  color: #3b82f6;
-}
-
-.dealsSubtitle {
-  font-family: var(--font-geist-sans);
-  font-size: 1.125rem;
-  color: #64748b;
-  margin: 0 0 1rem 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.viewAllLink {
-  color: #64748b;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: var(--font-geist-sans);
-  transition: color 0.2s ease;
-}
-
-.viewAllLink:hover {
-  color: #3b82f6;
-}
-
-.dealsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.dealCard {
-  background: white;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(229, 231, 235, 0.5);
-}
-
-.dealCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.dealImage {
-  height: 200px;
-  overflow: hidden;
-}
-
-.dealImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.dealContent {
-  padding: 1.5rem;
-}
-
-.dealTitle {
+.sectionSubtitle {
   font-family: var(--font-geist-sans);
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 1rem 0;
-  line-height: 1.2;
-}
-
-.dealDescription {
-  font-family: var(--font-geist-sans);
-  font-size: 0.875rem;
   color: #64748b;
-  line-height: 1.6;
-  margin: 0 0 1rem 0;
+  margin: 0 0 3rem 0;
 }
 
-.readMore {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.875rem;
-  font-family: var(--font-geist-sans);
-  transition: color 0.2s ease;
-  display: inline-block;
-  margin-bottom: 1rem;
-}
-
-.readMore:hover {
-  color: #2563eb;
-}
-
-.dealPrice {
-  font-family: var(--font-geist-sans);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #3b82f6;
-  margin-bottom: 1rem;
-}
-
-.bookNowButton {
-  width: 100%;
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-family: var(--font-geist-sans);
-}
-
-.bookNowButton:hover {
-  background: #2563eb;
-}
-
-/* Newsletter Section */
-.newsletterSection {
-  background: #f8fafc;
-  padding: 4rem 2rem;
-  margin: 2rem 0;
-}
-
-.newsletterContent {
+.chatGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  position: relative;
 }
 
-.newsletterTitle {
+.chatCard {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
   font-family: var(--font-geist-sans);
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 1rem 0;
-}
-
-.newsletterSubtitle {
-  font-family: var(--font-geist-sans);
-  font-size: 1.125rem;
-  color: #64748b;
-  margin: 0 0 2rem 0;
-}
-
-.newsletterForm {
   display: flex;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.newsletterInput {
-  flex: 1;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  outline: none;
-  font-family: var(--font-geist-sans);
-}
-
-.newsletterButton {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-family: var(--font-geist-sans);
-}
-
-.newsletterButton:hover {
-  background: #2563eb;
-}
-
-/* Worldwide Section */
-.worldwideSection {
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 2rem;
-  margin: 2rem 0;
+  min-height: 100px;
 }
 
-.worldwideTitle {
-  font-family: var(--font-geist-sans);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #64748b;
-  margin: 0;
+.centerGraphic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.aiCore {
+  width: 60px;
+  height: 60px;
+  background: #3b82f6;
+  border-radius: 50%;
+  position: relative;
+}
+
+.aiRays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -581,13 +452,8 @@
     order: -1;
   }
   
-  .dealsGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .newsletterForm {
-    flex-direction: column;
+  .ctaButton {
+    align-self: center;
   }
 }
 
@@ -609,24 +475,22 @@
     height: 480px;
   }
   
-  .dealsSection {
+  .infoSection {
     padding: 2rem 1rem;
   }
   
-  .dealsTitle {
+  .sectionTitle {
     font-size: 2rem;
   }
   
-  .newsletterSection {
-    padding: 2rem 1rem;
+  .chatGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .newsletterTitle {
-    font-size: 1.5rem;
-  }
-  
-  .betaSection {
-    bottom: 1rem;
-    right: 1rem;
+  .centerGraphic {
+    position: static;
+    transform: none;
+    margin: 2rem auto;
   }
 }

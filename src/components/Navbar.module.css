@@ -1,0 +1,338 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: var(--font-geist-sans);
+  z-index: 2;
+}
+
+.logoWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.betaTag {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #3b82f6;
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-geist-sans);
+  line-height: 1;
+}
+
+.logoText {
+  font-family: var(--font-geist-sans);
+  font-weight: 700;
+}
+
+.navLinks {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  font-family: var(--font-geist-sans);
+}
+
+.navLink:hover {
+  color: #1e40af;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  background: none;
+  border: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-geist-sans);
+  transition: color 0.2s ease;
+}
+
+.dropdownButton:hover {
+  color: #1e40af;
+}
+
+.dropdownArrow {
+  transition: transform 0.2s ease;
+}
+
+.dropdownArrow.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+  font-family: var(--font-geist-sans);
+}
+
+.dropdownItem:hover {
+  background-color: #f8fafc;
+  color: #1e40af;
+}
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 24px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background: #374151;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  font-weight: 600;
+  color: #1e293b;
+  font-family: var(--font-geist-sans);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(229, 231, 235, 0.5);
+}
+
+.mobileNavLinks {
+  padding: 1rem 0;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  font-family: var(--font-geist-sans);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+}
+
+.mobileNavLink:hover {
+  background-color: #f8fafc;
+  color: #1e40af;
+}
+
+.mobileDropdown {
+  border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+}
+
+.mobileDropdownButton {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-geist-sans);
+  transition: background-color 0.2s ease;
+}
+
+.mobileDropdownButton:hover {
+  background-color: #f8fafc;
+  color: #1e40af;
+}
+
+.mobileDropdownArrow {
+  transition: transform 0.2s ease;
+}
+
+.mobileDropdownArrow.rotated {
+  transform: rotate(180deg);
+}
+
+.mobileDropdownMenu {
+  background: #f8fafc;
+}
+
+.mobileDropdownItem {
+  display: block;
+  padding: 0.75rem 2rem 0.75rem 3rem;
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+  font-family: var(--font-geist-sans);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+}
+
+.mobileDropdownItem:hover {
+  background-color: #f1f5f9;
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  .mobileMenu {
+    display: block;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .logoText {
+    font-size: 1.25rem;
+  }
+}
